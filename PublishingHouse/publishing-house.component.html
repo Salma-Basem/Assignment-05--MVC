@@ -1,0 +1,66 @@
+<section class="header-section " id="first-section">
+    <div class="background-container d-flex align-items-center justify-content-center pb-3"[attr.dir]="language === 'ar' ? 'rtl' : 'ltr'" id="background">
+      <div class="overlay d-flex flex-column align-items-center justify-content-center {{ language === 'en' ? 'english' : 'arabic' }}">
+      
+       
+        <h2 class="text-center text-main fw-bold mb-3">{{ 'GHAYA_PROJECTS.PROJECT1.NAME' | translate }}</h2>
+
+        
+      </div>
+  </div>
+  </section> 
+  <div class="container-fluid bg-main py-2 " [attr.dir]="language === 'ar' ? 'rtl' : 'ltr'">
+
+    <div class="container py-1 mt-1 ">
+      <!--Video  section-->
+      <div class="container mx-auto">
+        <div class="video-wrapper">
+          <iframe width="560" height="315" 
+          src="https://www.youtube.com/embed/skpIFzbJl88?autoplay=1&loop=1&playlist=skpIFzbJl88&si=AyBnNbrxID6sEx0X&start=1" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+          </iframe>
+  
+          </div>
+      </div>
+      <!--Project1  section-->
+      <div  class="container mx-auto mt-3">
+         
+            <p class=" text-main lead  mb-3">{{ 'GHAYA_PROJECTS.PROJECT1.DETAILS.POINT1' | translate }}</p>
+            <p class=" text-main lead  mb-3">{{ 'GHAYA_PROJECTS.PROJECT1.DETAILS.POINT2' | translate }}</p>
+            <p class=" text-main lead  mb-3">{{ 'GHAYA_PROJECTS.PROJECT1.DETAILS.POINT3' | translate }}</p>
+            <p class=" text-main lead  mb-3">{{ 'GHAYA_PROJECTS.PROJECT1.DETAILS.POINT4' | translate }}</p>
+            <p class=" text-main lead  mb-3">{{ 'GHAYA_PROJECTS.PROJECT1.DETAILS.POINT5' | translate }}</p>
+           <div class="row justify-content-center align-items-center">
+
+            <a (click)="goToGmail()" class="text-center cursor-pointer h4">
+              <i class="fa-solid fa-envelope text-main fa-bounce ms-2 me-2"></i>
+              publishing&#64;ghayaeg.com
+            </a>          
+           </div>
+           <p  class="fw-bolder h4" [innerHTML]="'GHAYA_PROJECTS.PROJECT1.DETAILS.POINT6' | translate | newlineToBr"></p>
+
+           <ul class="custom-list" >
+            <li class="lead" [innerHTML]="'GHAYA_PROJECTS.PROJECT1.DETAILS.POINT7' | translate | newlineToBr"></li>
+            <li class="lead" [innerHTML]="'GHAYA_PROJECTS.PROJECT1.DETAILS.POINT8' | translate | newlineToBr"></li>
+            <li class="lead" [innerHTML]="'GHAYA_PROJECTS.PROJECT1.DETAILS.POINT9' | translate | newlineToBr"></li>
+            <li class="lead" [innerHTML]="'GHAYA_PROJECTS.PROJECT1.DETAILS.POINT10' | translate | newlineToBr"></li>
+            <li class="lead" [innerHTML]="'GHAYA_PROJECTS.PROJECT1.DETAILS.POINT11' | translate | newlineToBr"></li>
+            <li class="lead" [innerHTML]="'GHAYA_PROJECTS.PROJECT1.DETAILS.POINT12' | translate | newlineToBr"></li>
+            
+            <div class="row justify-content-top align-items-center">
+
+            
+              <a (click)="goToGmail()" class="text-center cursor-pointer h4">
+                <i class="fa-solid fa-envelope text-main fa-bounce ms-2 me-2"></i>
+                publishing&#64;ghayaeg.com
+              </a>  
+            </div>
+
+            </ul>
+      </div>
+    </div>
+    </div>
