@@ -1,4 +1,5 @@
 using Data.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Service.Helper;
@@ -7,6 +8,7 @@ using Web.Models;
 
 namespace Web.Controllers
 {
+    [Authorize]
     public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -145,6 +147,9 @@ namespace Web.Controllers
                 return View(input);
         }
 
-
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
     }
 }

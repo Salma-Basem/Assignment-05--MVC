@@ -16,7 +16,7 @@ namespace Service.Helper
             client.EnableSsl = true;
             client.Credentials = new NetworkCredential("salmabasem2211@gmail.com", "dnqjdcslazasnvhi");
             client.Send("salmabasem2211@gmail.com",input.To,input.Subject,input.Body);
-          
+            
 
         }
     }

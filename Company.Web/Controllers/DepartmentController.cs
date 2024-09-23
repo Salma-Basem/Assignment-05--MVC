@@ -1,4 +1,5 @@
 ﻿using Data.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Repository.Interfaces;
 using Service.Interfaces;
@@ -7,6 +8,7 @@ using Service.Services;
 
 namespace Web.Controllers
 {
+    [Authorize]
     public class DepartmentController : Controller
     {
         private readonly IDepartmentService _departmentService;
@@ -59,6 +61,11 @@ namespace Web.Controllers
             return View(viewName,department);
         }
 
+        public IActionResult Update (int? id)
+        {
+            return Details(id, "Update");
+        }
+        [HttpPost]
         public IActionResult Update(int? id, DepartmentDto department)
         {
             if(department.Id != id.Value)

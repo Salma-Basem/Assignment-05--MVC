@@ -1,0 +1,26 @@
+﻿@model ApplicationUser
+<h1>User Details</h1>
+<br/>
+<br/>
+<div class="row">
+   
+ <div class="col-12">
+        <div class="form-group">
+            <label class="col-form-label" asp-for="@Model.UserName"></label>
+            <input type="text" asp-for="@Model.UserName" class="form-control" readonly />
+
+
+        </div>
+
+        <div class="form-group">
+            <label class="col-form-label" asp-for="@Model.Email"></label>
+            <input type="text" asp-for="@Model.Email" class="form-control" readonly />
+
+
+        </div>
+        <a class="btn btn-success" asp-action="Update" asp-route-id="@Model.Id">Update</a>
+        <a class="btn btn-light">Back to list</a> 
+
+ </div>
+      
+</div>

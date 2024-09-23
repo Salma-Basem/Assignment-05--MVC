@@ -1,0 +1,38 @@
+﻿@model IEnumerable<IdentityRole>
+<h1>All Roles</h1>
+<br />
+<br />
+
+<a class="my-3" asp-action="Create" class="btn btn-primary">
+    Create new roles
+</a>
+@if (Model.Count() > 0)
+{
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th> @Html.DisplayNameFor(d => d.Id)</th>
+                <th> @Html.DisplayNameFor(d => d.Name)</th>
+                
+                <th>details</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name f</td>
+                  
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h3 class="text-danger">There is no roles</h3>
+}

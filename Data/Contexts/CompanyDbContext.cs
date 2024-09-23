@@ -11,10 +11,14 @@ using System.Threading.Tasks;
 
 namespace Data.Contexts
 {
-    public class CompanyDbContext : IdentityDbContext<IdentityUser>
+    public class CompanyDbContext : IdentityDbContext<ApplicationUser>
     {
         public CompanyDbContext(DbContextOptions<CompanyDbContext> options) : base(options) 
-        { }
+        { 
+        
+        
+        
+        }
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
         //   optionsBuilder.UseSqlServer("server=DESKTOP-CPOFDU6\\MSSQLSERVER01; database=CompanyDb; trusted_connections=true;");

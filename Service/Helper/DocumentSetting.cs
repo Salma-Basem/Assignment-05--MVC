@@ -14,8 +14,8 @@ namespace Service.Helper
             //var folderPath = "D:\\visual Studio 2022\\MVC\\Company.Web\\wwwroot\\Files\\Images\\";
 
             var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\Files", folderName);
-            var fileName = $"{Guid.NewGuid()}{}-{file.FileName}";
-            var filePath = Path.Combine(folderPath, fileName);
+			var fileName = $"{Guid.NewGuid()}-{file.FileName}";
+			var filePath = Path.Combine(folderPath, fileName);
             using var fileStream = new FileStream(filePath, FileMode.Create);
             file.CopyTo(fileStream);
             return fileName;
